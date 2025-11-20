@@ -183,9 +183,9 @@ class Controller:
             for i in range(NUM_MOTORS):
                 self.low_cmd.motor_cmd[i].q = phase * self.sit_angles[i] + (
                     1 - phase) * self.qpos[i]
-                self.low_cmd.motor_cmd[i].kp = 20
+                self.low_cmd.motor_cmd[i].kp = 10
                 self.low_cmd.motor_cmd[i].dq = 0.0
-                self.low_cmd.motor_cmd[i].kd = 0.5
+                self.low_cmd.motor_cmd[i].kd = 0.1
                 self.low_cmd.motor_cmd[i].tau = 0.0
     
 
